@@ -1,5 +1,5 @@
 import js from '@eslint/js'
-import pluginVue from 'eslint-plugin-vue'
+import pluginVue, { rules } from 'eslint-plugin-vue'
 import ts from 'typescript-eslint'
 import vueTs from '@vue/eslint-config-typescript'
 import vuePrettier from '@vue/eslint-config-prettier'
@@ -10,6 +10,24 @@ export default [
   ...pluginVue.configs['flat/essential'],
   ...ts.configs.recommended,
   ...vueTs(),
+  {
+    rules: {
+      'prettier/prettier': [
+        'error',
+        {
+          singleQuote: true,
+          endOfLine: 'auto',
+          semi: true,
+          tabWidth: 2,
+          trailingComma: 'all',
+          printWidth: 80,
+          bracketSpacing: true,
+          arrowParens: 'avoid',
+          useTab: true,
+        },
+      ],
+    },
+  },
   vuePrettier,
   {
     files: ['**/*.{ts,tsx,vue}'],
