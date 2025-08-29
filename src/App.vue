@@ -1,11 +1,16 @@
-<script setup lang="ts"></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div>
+    <HeaderComponents />
+    <main>
+      <WithModalComponent />
+    </main>
+  </div>
 </template>
+
+<script setup lang="ts">
+import WithModalComponent from '@/components/WithModalComponent.vue'
+import HeaderComponents from '@/components/HeaderComponents.vue'
+// import BodyComponents from './components/BodyComponents.vue'
+</script>
 
 <style scoped></style>
