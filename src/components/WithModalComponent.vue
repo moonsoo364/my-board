@@ -1,4 +1,5 @@
 <template>
+  <h1>{{ store.secret }}</h1>
   <h2>모달에 전달할 값을 입력하고 버튼을 누르세요.</h2>
   <div>
     <input
